@@ -1,0 +1,155 @@
+.Container {
+  display: flex;
+}
+main {
+  width: 100%;
+}
+/* .sidebar{
+    height: 100vh;
+   
+} */
+.upperSidebar {
+  height: 156.49px;
+  position: relative;
+  background: linear-gradient(180.43deg, #ccfffd 0.35%, #89bdbb 95.13%);
+}
+.threedotsicon {
+  position: absolute;
+  right: 13.4px;
+  top: 7.37px;
+}
+.Avatar {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 60.44px;
+  height: 60px;
+  left: 27.44px;
+  top: 34.77px;
+  border-radius: 50%;
+  border: 2px solid #00c5a1;
+}
+.Welcome {
+  position: absolute;
+  width: 100px;
+  height: 14px;
+  left: 100.9px;
+  top: 38.74px;
+
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 123.4%;
+
+  color: #132c31;
+}
+.ShopName {
+  position: absolute;
+  width: 136px;
+  height: 21px;
+  left: 99.24px;
+  top: 52.56px;
+
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 123.4%;
+  /* identical to box height, or 21px */
+
+  color: #132c31;
+}
+.middleUpperSidebar {
+  background-color: red;
+}
+/* .Avatar{
+    width: 60.44px;
+    height: 60px;
+    border-radius: 50%;
+border: 2px solid #00C5A1;
+padding-top: 10.77px;
+} */
+.lowerSidebar {
+  height: 621.19px;
+  background: #132c31;
+  display: flex;
+  flex-direction: column;
+}
+.linkdiv {
+  padding-top: 10.12px;
+}
+
+.link {
+  color: #ffffff;
+  display: flex;
+  width: 275px;
+  height: 43px;
+  gap: 15px;
+  align-items: center;
+}
+.active {
+  background: rgba(137, 189, 187, 0.3);
+
+}
+/* .grrendiv {
+    position: absolute;
+    width: 7px;
+    height: 43px;
+    left: 268.66px;
+    top: 0px;
+    
+    background: #89BDBB;
+} */
+.itemicon {
+  margin-left: 50px;
+  color: #ffffff;
+}
+.link_text {
+    font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 123.4%;
+  /* identical to box height, or 19px */
+
+  color: #ffffff;
+}
+.logoutDiv {
+  width: 275px;
+  height: 57.38px;
+  background: #7b0101;
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+.logouticon {
+  padding-left: 39.19px;
+}
+.Creatediv{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.Creatediv button{
+    width: 179.14px;
+    height: 43.16px;
+    background: #89BDBB;
+box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 123.4%;
+/* or 16px */
+
+
+color: #132C31;
+}
+
+
+
