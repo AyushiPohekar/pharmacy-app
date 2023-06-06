@@ -78,6 +78,9 @@ padding-top: 10.77px;
 }
 .linkdiv {
   padding-top: 10.12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .link {
@@ -85,7 +88,17 @@ padding-top: 10.77px;
   display: flex;
   width: 275px;
   height: 43px;
+  display: flex;
+ 
   gap: 15px;
+  align-items: center;
+}
+.closelink{
+    color: #ffffff;
+  display: flex;
+  width: 130.9px;
+  height: 43px;
+
   align-items: center;
 }
 .active {
