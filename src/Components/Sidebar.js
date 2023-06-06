@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import DiamondIcon from '@mui/icons-material/Diamond';
+
 import { BiLogOutCircle } from "react-icons/bi";
 import {
   MdOutlineInventory2,
   MdCopyAll,
   MdContactSupport,
   MdCreateNewFolder,
+
 } from "react-icons/md";
 import { TbDiscount2 } from "react-icons/tb";
 
 import { AiOutlineBorderOuter } from "react-icons/ai";
-import { GrDiamond } from "react-icons/gr";
+
+
 import { NavLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import UpperSidebar from "./UpperSidebar";
 
 //mayerial Ui modal style
 const style = {
@@ -34,11 +38,7 @@ const style = {
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen(!isOpen);
-  const [phoneNo, setPhoneNo] = useState("");
-  const [showPopup, setShowPopup] = useState(false);
-  const [deliveryType, setDeliveryType] = useState("");
-  const [address, setAddress] = useState("");
-  const [popupMessage, setPopupMessage] = useState("");
+ 
 
   //material Ui Modal states
   const [open, setOpen] = React.useState(false);
@@ -69,7 +69,7 @@ const Sidebar = ({ children }) => {
     {
       path: "/premium",
       name: "Premium",
-      icon: <GrDiamond />,
+      icon:   <DiamondIcon fontSize="small"/>,
     },
     {
       path: "/support",
@@ -81,24 +81,23 @@ const Sidebar = ({ children }) => {
     <div className="Container">
       <div style={{ width: isOpen ? "275px" : "130.9px" }} className="sidebar">
         <div className="upperSidebar">
-          <BsThreeDotsVertical className="threedotsicon" onClick={toggle} />
-          <div className="Avatar"></div>
-          <div className="Welcome">Welcome,UserName</div>
-          <div className="ShopName">Aardhana Medical</div>
+        <UpperSidebar isOpen={isOpen} toggle={toggle}/>
+          
         </div>
         <div className="lowerSidebar">
           <div className="linkdiv">
+            
             {menuItem.map((item, index) => (
               <NavLink
                 to={item.path}
                 key={index}
                 className={isOpen ? "link" : "closelink"}
-                activeClassName="active"
+                activeClassName={isOpen?"active":"closeactive"}
               >
                 {(isActive) => (
                   <>
                     {/* {isActive && <div className="grrendiv"></div>} */}
-                    <div className="itemicon">{item.icon}</div>
+                    <div className={isOpen?"itemicon":"closeitemicon"}>{item.icon}</div>
                     <div
                       style={{ display: isOpen ? "block" : "none" }}
                       className="link_text"
