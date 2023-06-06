@@ -109,7 +109,7 @@ main {
   height: 17.26px;
   background: rgba(0, 0, 0, 0.23);
   border-radius: 17px;
-  font-family: "Lato,sans-serif";
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 7.96402px;
@@ -245,4 +245,31 @@ color: #FFFFFF;
 .stars {
   width: 15.76px;
   height: 15.76px;
+}
+
+/* MaterialUI Modal */
+
+.modalnav{
+padding: 0.3rem 2rem;
+
+height: 57.05px;
+background: #112D31;
+border-radius: 15px 15px 0px 0px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.modalnavtitle{
+  font-family: "Lato", sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 123.4%;
+color: #FFFFFF;
+}
+.ContactDiv{
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 1rem 3rem;
+ 
 }
