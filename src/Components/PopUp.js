@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import {BiPlus} from "react-icons/bi"
 import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 
@@ -29,7 +30,7 @@ const PopUp = ({ handleClose }) => {
 
   //adding Address
   const [showAddAddress, setShowAddAddress] = useState(false);
-const [newAddress, setNewAddress] = useState("");
+  const [newAddress, setNewAddress] = useState("");
 
   const handlePhoneNoChange = (event) => {
     const enteredPhoneNo = event.target.value;
@@ -55,11 +56,23 @@ const [newAddress, setNewAddress] = useState("");
 
   //mock data for address
 
-  const addresses = [
+  const [addresses, setAddresses] = useState([
     "123 Street, City, Country",
     "456 Avenue, Town, Country",
     "789 Road, Village, Country",
-  ];
+  ]);
+
+  const handleAddAddressClick = () => {
+    setShowAddAddress(true);
+  };
+
+  const handleAddAddress = () => {
+    if (newAddress.trim() !== "") {
+      setAddresses([...addresses, newAddress]);
+      setNewAddress("");
+      setShowAddAddress(false);
+    }
+  };
 
   return (
     <>
@@ -83,7 +96,7 @@ const [newAddress, setNewAddress] = useState("");
             <div className="Error">
               Customer Information not found in database
             </div>
-            <button>Send Invite Link</button>
+            <button className="btn">Send Invite Link</button>
           </div>
           {showDeliveryDiv && (
             <div className="ShowDeliveryDiv">
@@ -123,22 +136,31 @@ const [newAddress, setNewAddress] = useState("");
                 {addresses.map((address, index) => {
                   return (
                     <>
-                    <div className="AdressInput">
-                      <input
-                        type="radio"
-                        id={`address-${index}`}
-                        name="address"
-                        value={address}
-                        checked={selectedAddress === address}
-                        onChange={() => setSelectedAddress(address)}
-                      />
-                      <label htmlFor={`address-${index}`}>{address}</label>
+                      <div className="AdressInput">
+                        <input
+                          type="radio"
+                          id={`address-${index}`}
+                          name="address"
+                          value={address}
+                          checked={selectedAddress === address}
+                          onChange={() => setSelectedAddress(address)}
+                        />
+                        <label htmlFor={`address-${index}`}>{address}</label>
                       </div>
                     </>
                   );
                 })}
-                <div>Add new Address</div>
-                <button onClick={handleCreateOrder}>Create New Order</button>
+             {
+                showAddAddress&&(<input
+                    type="text"
+                    value={newAddress}
+                    onChange={(e) => setNewAddress(e.target.value)}
+                  />)
+             }
+               <div onClick={handleAddAddressClick} className="AddAddress">
+                   <BiPlus/> Add New Address
+                  </div>
+                <button onClick={handleCreateOrder} className="btn" style={{marginLeft:"30%"}}>Create New Order</button>
               </>
             )}
           </div>

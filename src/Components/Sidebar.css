@@ -279,6 +279,9 @@ padding-top: 10.77px;
   align-items: center;
   padding: 1rem;
 }
+.PopUpSecondDiv>*{
+  margin-bottom: 2rem;
+}
 .ContactDiv {
   display: flex;
 }
@@ -323,7 +326,7 @@ padding-top: 10.77px;
   line-height: 123.4%;
   color: #980404;
 }
-.ErrorDiv button {
+.btn {
   width: 164px;
   height: 41px;
   background: #112d31;
@@ -341,7 +344,7 @@ padding-top: 10.77px;
 .ShowDeliveryDiv {
   width: 100%;
   display: flex;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   width: 460.72px;
   align-items: center;
  
@@ -389,7 +392,7 @@ background: #00C5A1;
 .AddressDiv{
   width: 100%;
   display: flex;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   width: 460.72px;
  
   flex-direction: column;
@@ -438,4 +441,21 @@ line-height: 123.4%;
 
 
 color: #000000;
+}
+.AddAddress{
+  
+
+width: max-content;
+height: 19px;
+padding: 0.2rem;
+
+font-family: 'Lato',sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 123.4%;
+/* identical to box height, or 19px */
+
+
+color: #112D31;
 }
