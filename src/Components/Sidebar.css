@@ -241,7 +241,7 @@ padding-top: 10.77px;
   font-weight: 700;
   font-size: 13px;
   line-height: 123.4%;
-  /* or 16px */
+  cursor: pointer;
 
   color: #132c31;
 }
