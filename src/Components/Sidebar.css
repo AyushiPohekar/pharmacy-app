@@ -3,6 +3,13 @@
 }
 main {
   width: 100%;
+  background: linear-gradient(
+      180.26deg,
+      rgba(148, 237, 255, 0.6) 1.33%,
+      rgba(180, 252, 239, 0.6) 7.15%,
+      rgba(255, 255, 255, 0.6) 19.22%
+    ),
+    #eeeeee;
 }
 /* .sidebar{
     height: 100vh;
@@ -24,12 +31,12 @@ main {
   margin-left: auto;
 }
 .Avatardiv {
- display: flex;
- align-items: center;
- gap: 0.5rem;
- padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
 }
-.close-Avatardiv{
+.close-Avatardiv {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -91,7 +98,7 @@ main {
 .ProfileCompletiondiv {
   width: 155px;
   height: 26px;
- background: rgba(0, 0, 0, 0.23);
+  background: rgba(0, 0, 0, 0.23);
   border-radius: 17px;
   font-family: "Lato";
   font-style: normal;
@@ -179,10 +186,10 @@ padding-top: 10.77px;
 .closelink {
   color: #ffffff;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   width: 100%;
   height: 65px;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 .closeitemicon {
@@ -195,18 +202,16 @@ flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.closelink_text{
-width: max-content;
-height: 12px;
-font-family: 'Lato,sans-serif';
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 123.4%;
-color: #FFFFFF;
+.closelink_text {
+  width: max-content;
+  height: 12px;
+  font-family: "Lato,sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 123.4%;
+  color: #ffffff;
 }
-
-
 
 .logoutDiv {
   width: 100%;
@@ -219,7 +224,6 @@ color: #FFFFFF;
   margin-top: auto;
   justify-content: center;
 }
-
 
 .Creatediv {
   margin-top: 100px;
@@ -249,27 +253,45 @@ color: #FFFFFF;
 
 /* MaterialUI Modal */
 
-.modalnav{
-padding: 0.3rem 2rem;
+.modalnav {
+  padding: 0.3rem 2rem;
 
-height: 57.05px;
-background: #112D31;
-border-radius: 15px 15px 0px 0px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  height: 57.05px;
+  background: #112d31;
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.modalnavtitle{
+.modalnavtitle {
   font-family: "Lato", sans-serif;
-font-style: normal;
-font-weight: 600;
-font-size: 15px;
-line-height: 123.4%;
-color: #FFFFFF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 123.4%;
+  color: #ffffff;
 }
-.ContactDiv{
+.ContactDiv {
   display: flex;
   flex-wrap: nowrap;
-  padding: 1rem 3rem;
- 
+  padding: 1rem 4rem;
+}
+.ContactDivTitle{
+  font-family: "Lato", sans-serif;
+  width: 140.26px;
+height: 34px;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 123.4%;
+color: #000000;
+padding: 0 1rem;
+}
+.ContactDiv input{
+  box-sizing: border-box;
+width: 287.46px;
+height: 38.11px;
+background: #FFFFFF;
+border: 1px solid #CECECE;
+border-radius: 4.44633px;
 }

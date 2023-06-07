@@ -76,7 +76,7 @@ const Sidebar = ({ children }) => {
                   
                 </div>
                 <div className="ContactDiv">
-                    <div>Enter Customer Phone No</div>
+                    <div className="ContactDivTitle">Enter Customer Phone No</div>
                     <input/>
                   </div>
               </Box>
