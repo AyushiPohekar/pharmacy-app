@@ -51,7 +51,7 @@ const PopUp = ({ handleClose }) => {
 
   const handleCreateOrder = () => {
     handleClose();
-    navigate("/create");
+    navigate("/create",{state:{deliveryType}});
   };
 
   //mock data for address

@@ -7,134 +7,163 @@
   height: 107.23px;
   background: #d6f6f0;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
- 
 }
-.symboldivText{
-    position: absolute;
-    top: 58.24px;
-    left: 1199.03px;
+.symboldivText {
   position: absolute;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 11px;
-    line-height: 123.4%;
+  top: 58.24px;
+  left: 1199.03px;
+  position: absolute;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 123.4%;
 }
-.creatdiv{
+.creatdiv {
+  display: flex;
+  flex-direction: column;
+}
+.firstdiv {
+  width: 1156px;
+  height: 57.81px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.showdiv {
+  margin-top: 31.81px;
+  margin-right: 83.91px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 123.4%;
+  color: #112d31;
+}
+.Sliderdiv {
+  margin-top: 31.81px;
+  margin-right: 151px;
+}
+.gobtn {
+  margin-top: 31px;
+  margin-right: 29.68px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 9px;
+  gap: 6px;
+  width: 111px;
+  height: 26px;
+  background: #296e7c;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.22), inset 4px -4px 6px #126374;
+  border-radius: 23px;
+}
+.gobtn span {
+  width: 72px;
+  height: 16px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 123.4%;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.diicon {
+  width: 10.97px;
+  height: 8.99px;
+  color: #ffffff;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.seconddiv {
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+}
+.seconddiv > * {
+  margin-right: 0.2rem;
+}
+
+.order {
+  width: 46px;
+  height: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 123.4%;
+  color: rgba(19, 44, 49, 0.6);
+}
+
+.secondtext {
+  width: max-content;
+  height: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 123.4%;
+  color: #132c31;
+}
+.thirddiv{
+    padding-left: 1rem;
     display: flex;
-    flex-direction: column;
-   
+    margin-top: 1rem;
 }
-.firstdiv{
-    width: 1156px;
-    height:57.81px;
- 
-    display: flex;
-    justify-content: flex-end;
-    
+.thirddiv>*{
+    margin-right: 2rem;
 }
-.showdiv{
- margin-top: 31.81px;
- margin-right: 83.91px;
-font-family: 'Lato',sans-serif;
+
+.boxdiv{
+box-sizing: border-box;
+border: 1px solid #89BDBB;
+border-radius: 14px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 0.5rem;
+gap: 1rem;
+}
+.parafirst{
+font-family: 'Lato'sans-serif;
 font-style: normal;
 font-weight: 700;
-font-size: 14px;
+font-size: 13px;
 line-height: 123.4%;
 color: #112D31;
 }
-.Sliderdiv{
-    margin-top: 31.81px;
-    margin-right: 151px;
-}
-.gobtn{
-    margin-top: 31px;
-    margin-right: 29.68px;
-    display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 5px 9px;
-gap: 6px;
-width: 111px;
-height: 26px;
-background: #296E7C;
-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.22), inset 4px -4px 6px #126374;
-border-radius: 23px;
-}
-.gobtn span{
-    width: 72px;
-height: 16px;
 
+.parasecond{
 font-family: 'Lato',sans-serif;
 font-style: normal;
-font-weight: 500;
-font-size: 13px;
+font-weight: 600;
+font-size: 12px;
 line-height: 123.4%;
-
-
-
-color: #FFFFFF;
-
-
-
-
-flex: none;
-order: 0;
-flex-grow: 0;
+color: #222222;
 }
-.diicon{
-    width: 10.97px;
-height: 8.99px;
+.boxdivsecond{
+    box-sizing: border-box;
+border: 1px solid #89BDBB;
+border-radius: 14px;
+display: flex;
 
-color: #FFFFFF;
+align-items: center;
+justify-content: center;
+padding: 0.5rem;
+gap: 1rem;
+}
+.paymentsecond{
+  height: 100%;
+border: 1px solid #D1D1D1;
 
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
 }
 
 
-.seconddiv{
-    display: flex;
-    padding-left: 1rem;
-    align-items: center;
-}
-.seconddiv>*{
-    margin-right:0.2rem
-}
 
-.order{
-  
-width: 46px;
-height: 16px;
-
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 13px;
-line-height: 123.4%;
-/* identical to box height, or 16px */
-
-
-color: rgba(19, 44, 49, 0.6);
-}
-.secondtext{
-   
-width: max-content;
-height: 16px;
-
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 13px;
-line-height: 123.4%;
-/* identical to box height, or 16px */
-
-
-color: #132C31;
-}

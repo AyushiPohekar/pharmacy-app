@@ -2,9 +2,11 @@ import React from 'react';
 import "./Create.css";
 import DiamondIcon from "@mui/icons-material/Diamond";
 import { AiOutlineArrowRight } from 'react-icons/ai';
+import ThirdCreate from './ThirdCreate';
 
 
-const Create = () => {
+const Create = ({state}) => {
+    console.log(state)
   return (
   <>
   <div className='symboldiv'></div>
@@ -21,9 +23,7 @@ const Create = () => {
         <p className='secondtext'> Create new Order</p>
     </div>
     <div className='thirddiv'>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <ThirdCreate state={state}/>
        
     </div>
     <div className='thirddiv'>third</div>
