@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
-import Sidebar from "./Components/Sidebar";
+
 import Orders from "./Pages/Orders";
 import Inventory from "./Pages/Inventory";
 import Offers from "./Pages/Offers";
@@ -8,6 +8,7 @@ import Premium from "./Pages/Premium";
 import CreateOrders from "./Pages/CreateOrders";
 import "./App.css";
 import Support from "./Pages/Support";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
   return (

@@ -66,7 +66,8 @@ const PopUp = ({ handleClose }) => {
     setShowAddAddress(true);
   };
 
-  const handleAddAddress = () => {
+  const handleAddAddress = (e) => {
+    e.preventDefault();
     if (newAddress.trim() !== "") {
       setAddresses([...addresses, newAddress]);
       setNewAddress("");
@@ -151,11 +152,11 @@ const PopUp = ({ handleClose }) => {
                   );
                 })}
              {
-                showAddAddress&&(<input
+                showAddAddress&&(<form onSubmit={handleAddAddress}><input
                     type="text"
                     value={newAddress}
                     onChange={(e) => setNewAddress(e.target.value)}
-                  />)
+                  /></form>)
              }
                <div onClick={handleAddAddressClick} className="AddAddress">
                    <BiPlus/> Add New Address
