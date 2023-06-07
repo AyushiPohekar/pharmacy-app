@@ -252,10 +252,11 @@ padding-top: 10.77px;
 }
 
 /* MaterialUI Modal */
-
+.modalbox {
+  height: max-content;
+}
 .modalnav {
   padding: 0.3rem 2rem;
-
   height: 57.05px;
   background: #112d31;
   border-radius: 15px 15px 0px 0px;
@@ -271,27 +272,170 @@ padding-top: 10.77px;
   line-height: 123.4%;
   color: #ffffff;
 }
+.PopUpSecondDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
 .ContactDiv {
   display: flex;
-  flex-wrap: nowrap;
-  padding: 1rem 4rem;
 }
-.ContactDivTitle{
+.ContactDivTitle {
   font-family: "Lato", sans-serif;
   width: 140.26px;
-height: 34px;
+  height: 34px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 123.4%;
+  color: #000000;
+  padding: 0 1rem;
+}
+.ContactDiv input {
+  box-sizing: border-box;
+  width: 287.46px;
+  height: 38.11px;
+  background: #ffffff;
+  border: 1px solid #cecece;
+  border-radius: 4.44633px;
+}
+.ErrorDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+
+  width: 259px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ErrorDiv > * {
+  margin-bottom: 1rem;
+}
+
+.Error {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 123.4%;
+  color: #980404;
+}
+.ErrorDiv button {
+  width: 164px;
+  height: 41px;
+  background: #112d31;
+  border-radius: 28px;
+  margin-left: 20%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 123.4%;
+  color: #ffffff;
+}
+.ShowDeliveryDiv {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  width: 460.72px;
+  align-items: center;
+ 
+}
+.ShowDeliveryDivTitle {
+  width: 129px;
+  height: 17px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 123.4%;
+  font-family: "Lato", sans-serif;
+  color: #000000;
+  margin-right: 3rem;
+}
+.radiobtn input {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #132c31;
+ 
+}
+/* .radiobtn input:checked{
+  box-sizing: border-box;
+
+width: 12.28px;
+height: 12.28px;
+
+
+background: #00C5A1;
+} */
+.InputDiv {
+  width: 42px;
+  height: 17px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 123.4%;
+  color: #000000;
+  margin-left: 0.7rem;
+  margin-right: 1rem;
+}
+
+.AddressDiv{
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  width: 460.72px;
+ 
+  flex-direction: column;
+}
+.AddressDiv>*{
+  margin-bottom: 0.7rem;
+}
+.AddressTitle{
+
+width: 149px;
+height: 17px;
+
+
+font-family: 'Lato',sans-serif;
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
 line-height: 123.4%;
+
+
+
 color: #000000;
-padding: 0 1rem;
 }
-.ContactDiv input{
-  box-sizing: border-box;
-width: 287.46px;
-height: 38.11px;
-background: #FFFFFF;
-border: 1px solid #CECECE;
-border-radius: 4.44633px;
+.AdressInput{
+  display: flex;
+  width: 470.97px;
+height: max-content;
+background: rgba(137, 189, 187, 0.31);
+border-radius: 13px;
+align-items: center;
+padding: 0.3rem;
+}
+
+.AdressInput label{
+padding: 0.3rem;
+width: 410.72px;
+height: max-content;
+
+
+font-family: 'Lato',sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 123.4%;
+/* or 16px */
+
+
+color: #000000;
 }

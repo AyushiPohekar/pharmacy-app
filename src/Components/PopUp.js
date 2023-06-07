@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import "./Sidebar.css";
 
 //mayerial Ui modal style
 const style = {
@@ -18,19 +19,22 @@ const style = {
 };
 
 const PopUp = ({ handleClose }) => {
-    const navigate=useNavigate()
+  const navigate = useNavigate();
   const mockDatabase = ["1234567890", "9876543210", "5555555555"];
   const [phoneNo, setPhoneNo] = useState("");
   const [showerror, setShowerror] = useState(false);
   const [showDeliveryDiv, setShowDeliveryDiv] = useState(false);
   const [deliveryType, setDeliveryType] = useState("");
-  const [address, setAddress] = useState("");
+  const [selectedAddress, setSelectedAddress] = useState("");
+
+  //adding Address
+  const [showAddAddress, setShowAddAddress] = useState(false);
+const [newAddress, setNewAddress] = useState("");
 
   const handlePhoneNoChange = (event) => {
-   
     const enteredPhoneNo = event.target.value;
     setPhoneNo(enteredPhoneNo);
-  
+
     if (!mockDatabase.includes(enteredPhoneNo)) {
       setShowerror(true);
       setShowDeliveryDiv(false);
@@ -44,20 +48,22 @@ const PopUp = ({ handleClose }) => {
     setDeliveryType(event.target.value);
   };
 
-  const handleAddressChange = (event) => {
-    setAddress(event.target.value);
-  };
-
   const handleCreateOrder = () => {
-    handleClose()
-   navigate("/create")
+    handleClose();
+    navigate("/create");
   };
 
+  //mock data for address
 
+  const addresses = [
+    "123 Street, City, Country",
+    "456 Avenue, Town, Country",
+    "789 Road, Village, Country",
+  ];
 
   return (
     <>
-      <Box sx={style}>
+      <Box sx={style} className="modalbox">
         <div className="modalnav">
           <div className="modalnavtitle">Create New Order</div>
           <AiOutlineClose
@@ -65,45 +71,77 @@ const PopUp = ({ handleClose }) => {
             onClick={handleClose}
           />
         </div>
-        <div className="ContactDiv">
-          <div className="ContactDivTitle">Enter Customer Phone No</div>
-          <input type="text" value={phoneNo} onChange={handlePhoneNoChange} />
-          <div style={{ display: showerror ? "block" : "none" }}>
-            <div>Customer Information not found in database</div>
+        <div className="PopUpSecondDiv">
+          <div className="ContactDiv">
+            <div className="ContactDivTitle">Enter Customer Phone No</div>
+            <input type="text" value={phoneNo} onChange={handlePhoneNoChange} />
+          </div>
+          <div
+            style={{ display: showerror ? "block" : "none" }}
+            className="ErrorDiv"
+          >
+            <div className="Error">
+              Customer Information not found in database
+            </div>
             <button>Send Invite Link</button>
           </div>
-          {showDeliveryDiv && <div>
-            <div>
-            <input
-              type="radio"
-              name="deliveryType"
-              value="standard"
-              checked={deliveryType === "standard"}
-              onChange={handleDeliveryTypeChange}
-            />
-            <label htmlFor="standard">Standard</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="deliveryType"
-              value="express"
-              checked={deliveryType === "express"}
-              onChange={handleDeliveryTypeChange}
-            />
-            <label htmlFor="express">Express</label>
-          </div>
-            
-          {deliveryType && (
-                <>
-                  <input type="text" value={address} onChange={handleAddressChange} />
-                  <button onClick={handleCreateOrder}>Create New Order</button>
-                </>
-              )}
+          {showDeliveryDiv && (
+            <div className="ShowDeliveryDiv">
+              <div className="ShowDeliveryDivTitle">Select delivery type:</div>
+              <div>
+                <input
+                  type="radio"
+                  name="deliveryType"
+                  value="pickup"
+                  checked={deliveryType === "pickup"}
+                  onChange={handleDeliveryTypeChange}
+                  className="radiobtn"
+                />
+                <label htmlFor="pickup" className="InputDiv">
+                  pickup
+                </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="deliveryType"
+                  value="Home delivery"
+                  checked={deliveryType === "Home delivery"}
+                  onChange={handleDeliveryTypeChange}
+                  className="radiobtn"
+                />
+                <label htmlFor="Home delivery" className="InputDiv">
+                  Home delivery
+                </label>
+              </div>
             </div>
-             
-            
-            }
+          )}
+          <div className="AddressDiv">
+            {deliveryType && (
+              <>
+                <div className="AddressTitle">Select delivery address:</div>
+                {addresses.map((address, index) => {
+                  return (
+                    <>
+                    <div className="AdressInput">
+                      <input
+                        type="radio"
+                        id={`address-${index}`}
+                        name="address"
+                        value={address}
+                        checked={selectedAddress === address}
+                        onChange={() => setSelectedAddress(address)}
+                      />
+                      <label htmlFor={`address-${index}`}>{address}</label>
+                      </div>
+                    </>
+                  );
+                })}
+                <div>Add new Address</div>
+                <button onClick={handleCreateOrder}>Create New Order</button>
+              </>
+            )}
+          </div>
         </div>
       </Box>
     </>
